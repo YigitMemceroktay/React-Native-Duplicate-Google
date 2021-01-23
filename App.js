@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View,Image,TextInput} from 'react-native';
+import { StyleSheet, Text, View,Image,TextInput, TouchableWithoutFeedback} from 'react-native';
 
 export default function App() {
   return (
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   GmailText: {
     flexDirection: 'row-reverse',
     flex: 1,
-   backgroundColor: 'red',
+  
     marginTop:15,
     marginRight:20
   },
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
       flexDirection:'column',
       justifyContent:'center',
       alignItems:'center',
-      backgroundColor:'blue'
+     
     },
     googleLogo:{
       width:350,
@@ -80,19 +80,19 @@ const styles = StyleSheet.create({
       fontSize:15
     },
     mainTextInput:{
-      backgroundColor:'violet',
+      
       flexDirection:'row',
       width:600,
       height:50,
       borderRadius:20,
-      
+      shadowRadius:20
       
     },
     sectionStyle: {
       flexDirection: 'row',
       alignItems:'center',  
       borderColor:'#C6C6C6',
-      
+  
       borderWidth: 0.5,
       
       paddingRight:20,
@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     
       
   },
+  
   magnify:{
     width:15,
     height:15,
@@ -113,5 +114,14 @@ const styles = StyleSheet.create({
     width:15,
     
   }
-
 });
+var customStyle = {      
+  control: provided => ({
+      ...provided,           
+      height:40, width:400,marginLeft:10,
+      border: "0px solid black",
+      fontSize: 13,
+      backgroundColor: 'white',
+      outline: 'none'            
+  })
+}  
